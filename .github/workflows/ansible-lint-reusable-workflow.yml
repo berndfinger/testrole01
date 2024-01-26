@@ -19,6 +19,9 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v4
 
+      - name: Display the path
+        run: pwd
+
       - name: Set up Python 3
         uses: actions/setup-python@v5
         with:
@@ -32,5 +35,5 @@ jobs:
           pip3 install ansible-lint==6.22.2
 
       - name: Run ansible-lint
-        working-directory: /home/runner/work/berndfinger/${{ inputs.role }}
+        working-directory: /home/runner/work/${{ inputs.role }}/${{ inputs.role }}
         run: ansible-lint
