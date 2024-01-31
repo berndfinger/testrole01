@@ -26,9 +26,6 @@ on:
 
 jobs:
   ansible-lint:
-    name: call-ansible-lint-with-role
-    steps:
-      - name: 'berndfinger/testrole01/.github/workflows/ansible-lint-reusable-workflow.yml@main'
-        uses: berndfinger/testrole01/.github/workflows/ansible-lint-reusable-workflow.yml@main
-        with:
-          role: testrole01
+    uses: berndfinger/testrole01/.github/workflows/ansible-lint-reusable-workflow.yml@main
+    with:
+      workflow_dispatch: testrole01
