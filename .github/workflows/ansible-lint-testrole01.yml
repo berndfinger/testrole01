@@ -28,4 +28,4 @@ jobs:
   ansible-lint:
     uses: berndfinger/testrole01/.github/workflows/ansible-lint-reusable-workflow.yml@main
     with:
-      role: testrole01
+      workflow_dispatch: testrole01
